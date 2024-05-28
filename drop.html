@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        ul{
+            background-color: blue;
+            list-style: none;
+            font-family: "monospace";
+        }
+        ul li{
+            display: inline-block;
+            position: relative;
+        }
+        ul li a{
+            display: block;
+            padding: 20px 20px;
+            color:white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        ul li ul.dropdown li{
+            display: block;
+        }
+
+        ul li ul.dropdown{
+            width: 100%;
+            position: absolute;
+            display: none;
+            background-color: black;
+        }
+        ul li a:hover{
+            background-color: chocolate;
+            transition:all 1.3s;
+        }
+        ul li:hover ul.dropdown{
+            display: block;
+            
+        }
+
+        .fas fa-chevron-down{
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Courses <i class="fas fa-chevron-down"></i></a> 
+            <ul class="dropdown">
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React Js</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</body>
+</html>
